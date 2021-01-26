@@ -1,0 +1,14 @@
+# Java
+*.class
+build
+
+# InteliJ
+*.iml
+.idea
+
+
+# Gradle
+gradlew
+gradlew.bat
+gradle
+.gradle

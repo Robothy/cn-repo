@@ -17,7 +17,7 @@ java {
 }
 
 dependencies {
-    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'
 }
 
 
@@ -34,11 +34,15 @@ gradlePlugin {
 pluginBundle {
     website = 'https://github.com/Robothy/cn-repo'
     vcsUrl = 'https://github.com/Robothy/cn-repo'
-    description = 'Quickly set CN repositories.'
-    tags = ['CN', 'repository', 'mirrors', '国内仓库']
+    description = 'Quickly set CN repository mirrors.(快速添加国内的仓库镜像)'
+    tags = ['repository', 'mirrors', '国内镜像']
 }
 
-wrapper{
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+wrapper {
     gradleVersion = '6.7'
 }
 

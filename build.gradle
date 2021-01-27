@@ -23,11 +23,19 @@ dependencies {
 
 gradlePlugin {
     plugins {
-        simplePlugin {
+        cnRepositoryPlugin {
             id = 'com.robothy.cn-repo'
             implementationClass = 'com.robothy.CnRepositoryPlugin'
+            displayName = 'CN Repository plugin'
         }
     }
+}
+
+pluginBundle {
+    website = 'https://github.com/Robothy/cn-repo'
+    vcsUrl = 'https://github.com/Robothy/cn-repo'
+    description = 'Quickly set CN repositories.'
+    tags = ['CN', 'repository', 'mirrors', '国内仓库']
 }
 
 wrapper{

@@ -34,8 +34,8 @@ gradlePlugin {
 pluginBundle {
     website = 'https://github.com/Robothy/cn-repo'
     vcsUrl = 'https://github.com/Robothy/cn-repo'
-    description = 'Quickly set CN repository mirrors.(快速添加国内的仓库镜像)'
-    tags = ['repository', 'mirrors', '国内镜像']
+    description = 'Quickly set CN repository mirrors.(快速添加国内的仓库镜像，如阿里云镜像)'
+    tags = ['repository', 'mirrors', '国内镜像', '镜像','国内仓库','Maven 仓库']
 }
 
 tasks.withType(JavaCompile) {

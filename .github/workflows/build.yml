@@ -21,6 +21,7 @@ jobs:
     - name: Install Gradle
       run: |
         sudo apt-get update
+        sudo apt list -a gradle
         sudo apt-get install -y gradle
     - name: gradle wrapper
       run: |

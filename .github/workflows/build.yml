@@ -19,9 +19,14 @@ jobs:
       with:
         java-version: 1.8
     - name: Install Gradle
-      run: sudo apt-get install -y gradle
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gradle
     - name: gradle wrapper
-      run: gradle wrapper
+      run: |
+        gradle --version
+        gradle wrapper
+        gradlew --version
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle

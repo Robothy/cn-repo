@@ -32,7 +32,7 @@ jobs:
       run: gradle wrapper
 
     - name: test
-      run: gradlew test
+      run: ./gradlew test
 
     - name: set API keys
       run: |
@@ -41,4 +41,4 @@ jobs:
         echo "gradle.publish.secret=${{secrets.GRADLE_PUBLISH_SECRET}}" > ~/.gradle/gradle.properties
 
     - name: publish plugins
-      run: gradlew publishPlugins
+      run: ./gradlew publishPlugins

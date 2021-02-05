@@ -9,6 +9,7 @@ on:
     paths:
       - '**.java'
       - '**.gradle'
+      - '**.yml'
 
 jobs:
   build:

@@ -11,10 +11,10 @@ repositories {
     mavenCentral()
 }
 
-//java {
-//    withSourcesJar()
-//    withJavadocJar()
-//}
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.4.2'

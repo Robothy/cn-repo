@@ -11,6 +11,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      GRADLE_VERSION: 6.8.2
 
     steps:
     - uses: actions/checkout@v2
@@ -20,14 +22,15 @@ jobs:
         java-version: 1.8
     - name: Install Gradle
       run: |
-        sudo apt-get update
-        sudo apt list -a gradle
-        sudo apt-get install -y gradle
-    - name: gradle wrapper
-      run: |
-        gradle --version
+        sudo mkdir -p /opt/gradle
+        wget https://services.gradle.org/distributions/gradle-${{env.GRADLE_VERSION}}-bin.zip
+        unzip -d /opt/gradle gradle-${{env.GRADLE_VERSION}}-bin.zip
+        export PATH=$PATH:/opt/gradle/gradle-${{env.GRADLE_VERSION}}/bin
+    - name: Gradle Wrapper
+      run:
+        gradle --v
         gradle wrapper
-        gradlew --version
+        gradlew --v
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle

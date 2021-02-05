@@ -6,7 +6,7 @@
 
 ```groovy
 plugins {
-    id 'com.robothy.cn-repo' version '1.5'
+    id 'com.robothy.cn-repo' version '1.6'
 }
 ```
 

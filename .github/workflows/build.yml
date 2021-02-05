@@ -26,12 +26,12 @@ jobs:
         wget https://services.gradle.org/distributions/gradle-${{env.GRADLE_VERSION}}-bin.zip
         unzip -d /opt/gradle gradle-${{env.GRADLE_VERSION}}-bin.zip
         export PATH=$PATH:/opt/gradle/gradle-${{env.GRADLE_VERSION}}/bin
-    - name: Gradle Wrapper
+    - name: Gradle Version
       run:
-        gradle --v
+        gradle -v
+    - name: Gradle Wrapper Version
+      run:
         gradle wrapper
-        gradlew --v
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+        gradlew -v
     - name: Build with Gradle
-      run: ./gradlew build
+      run: gradlew build

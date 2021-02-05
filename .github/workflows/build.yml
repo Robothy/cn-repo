@@ -30,8 +30,8 @@ jobs:
       run:
         gradle -v
     - name: Gradle Wrapper Version
-      run:
+      run: |
         gradle wrapper
-        gradlew -v
+        ./gradlew -v
     - name: Build with Gradle
-      run: gradlew build
+      run: ./gradlew build
